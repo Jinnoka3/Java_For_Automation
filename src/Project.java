@@ -1,16 +1,16 @@
 public class Project {
     static int x = 10;
-    static int y = 5;
-    static int z = 2;
+    static int y = 20;
+    static int z = 15;
     static int q = 7;
     public static void main(String[] args) {
 
         int lowest = getLowest(x, y);
         System.out.println(lowest);
-        int lowest1 = getLowest(z);
+        int lowest1 = getLowest1(x, y, z);
         System.out.println(lowest1);
-        int lowest2 = getLowest1(q);
-        System.out.println(lowest2);
+        int lowest1 = getLowest1(x, y, z);
+        System.out.println(lowest1);
 
     }
     public static int getLowest(int a, int b){
@@ -21,11 +21,12 @@ public class Project {
             return a;
         }
         else {
+           // System.out.println("");
             return a;
         }
     }
 
-    static int getLowest(int c){
+    static int getLowest1(int c){
         int low = getLowest(x, y);
         if(low < c){
             return low;
@@ -34,20 +35,28 @@ public class Project {
             return c;
         }
         else {
+
             return low;
         }
+
     }
 
-    static int getLowest1(int d) {
-        int low = getLowest(z);
-        if (low < d) {
-            return low;
-        } else if (low > d) {
-            return d;
-        } else {
+    static int getLowest2(int d){
+        int low = getLowest1(z);
+        if(low < d){
             return low;
         }
-    }
+        else if (low > d) {
+            return d;
+        }
+        else {
+
+            return low;
+        }
+
+
+
+
 }
 
 
