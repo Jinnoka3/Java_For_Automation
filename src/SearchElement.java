@@ -28,9 +28,18 @@ public class SearchElement {
         }
         //sort(array);
         System.out.println();
+        
+        long start1 = System.currentTimeMillis();
         regularSearch(array, num2);
+        long stop1 = System.currentTimeMillis();
+        long time1 = stop1 - start1;
+        System.out.println("time: " + time1);
         System.out.println();
+        long start2 = System.currentTimeMillis();
         binarySearch(array, num2);
+        long stop2 = System.currentTimeMillis();
+        long time2 = stop2 - start2;
+        System.out.println("time: " + time2);
 
 
     }
