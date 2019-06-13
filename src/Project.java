@@ -9,9 +9,9 @@ public class Project {
 
         int lowest = getLowest(x, y);
         System.out.println(lowest);
-        int lowest1 = getLowest(z);
+        int lowest1 = getLowest(x, y, z);
         System.out.println(lowest1);
-        int lowest2 = getLowest(q);
+        int lowest2 = getLowest(x, y, z, q);
         System.out.println(lowest2);
 
     }
@@ -21,9 +21,15 @@ public class Project {
         return get;
     }
 
-    public static int getLowest(int c){
+    public static int getLowest(int a, int b, int c){
         int low = getLowest(x, y);
         int get = (low <= c) ? low : c;
+        return get;
+    }
+
+    public static int getLowest(int a, int b, int c, int d){
+        int low = getLowest(x, y, z);
+        int get = (low <= d) ? low : d;
         return get;
     }
 }
