@@ -1,18 +1,9 @@
 package objects;
 
-public class Book {
-    String title;
-    Author author;
-    double price;
-    Book(String t, Author a, double p){
-        this.title = t;
-        this.author = a;
-        this.price = p;
-    }
-    void displayDetails(){
-        System.out.println("Book's details:" );
-        System.out.println("Title: " + title);
-        System.out.println(author.displayInfo());
-        System.out.println("Price: " + price);
+public class BookDemo {
+    public static void main(String[] args) {
+        Author author = new Author("Russel", "Winderand");
+        Book book = new Book ("Developing Java Software", author, 79.75);
+        book.displayDetails();
     }
 }
