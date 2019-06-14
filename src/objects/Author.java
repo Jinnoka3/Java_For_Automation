@@ -7,7 +7,7 @@ public class Author{
         this.firstName = f;
         this.lastName = l;
     }
-    public String displayInfo(){
+    protected String displayInfo(){
         return "Author's name: " + firstName + " " + lastName;
     }
 }
