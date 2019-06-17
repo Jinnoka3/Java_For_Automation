@@ -16,6 +16,7 @@ public class Clock {
     }
     public Clock(int seconds){
         this.seconds = seconds;
+        setClock(seconds);
     }
 
     public static boolean checkSec(int seconds){
