@@ -8,7 +8,6 @@ public class ClockDemo {
         int sec = in.nextInt();
         Clock firstClock = new Clock(sec);
         if (firstClock.checkSec(sec) == true) {
-            firstClock.setClock(sec);
             System.out.println("First time: " + firstClock.toString(firstClock));
 
             //+1 sec
