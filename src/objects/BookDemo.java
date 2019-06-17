@@ -9,7 +9,6 @@ public class BookDemo {
         System.out.println("Input Author's last name: ");
         String lastName = in.nextLine();
         Author author2 = new Author(name, lastName);
-
         System.out.println("input title: ");
         String title = in.nextLine();
         System.out.println("input price: ");
