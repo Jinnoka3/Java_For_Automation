@@ -1,10 +1,8 @@
-package object2;
-
-import java.util.Scanner;
-
 public class ClockDemo {
     public static void main(String[] args) {
         //time in seconds
+        Clock zeroClock = new Clock();
+        System.out.println("Default time: " + zeroClock.toString(zeroClock));
         Scanner in = new Scanner(System.in);
         System.out.println("Input time in seconds: ");
         int sec = in.nextInt();
