@@ -1,5 +1,3 @@
-package object2;
-
 public class Clock {
 
     public int hours;
