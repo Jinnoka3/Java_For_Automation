@@ -1,21 +1,24 @@
 package inheritance2;
 
+import java.util.Scanner;
+
 public class Circle extends Shape{
 
-    protected double radius;
+    private double radius;
 
-    protected Circle(){
+    public Circle(){
+        super();
         this.radius = 1.0;
     }
 
-    protected Circle(double radius){
-        this.radius = radius;
+    public Circle(double radius){
+        super();
+        setRadius(radius);
     }
 
-    protected Circle(double radius, String color, boolean filled){
-        this.radius = radius;
-        this.color = color;
-        this.filled = filled;
+    public Circle(double radius, String color, boolean filled){
+        super(color, filled);
+        setRadius(radius);
     }
 
     public double getRadius() {
@@ -23,26 +26,23 @@ public class Circle extends Shape{
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius <= 0) {
+            System.out.println("Wrong radius");
+        }
+        else {
+            this.radius = radius;
+        }
     }
-
-    public String getColor() {
-        return color;
+    @Override
+    public void input() {
+            super.input();
+            Scanner in = new Scanner(System.in);
+            System.out.println("Enter radius:");
+            double radius = in.nextDouble();
+            setRadius(radius);
     }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public boolean getFilled() {
-        return filled;
-    }
-
-    public void setFilled(boolean filled) {
-        this.filled = filled;
-    }
-
-    protected double getArea() {
+    public double getArea() {
+        ///////////////////////////////////////////
         final double PI = 3.1415926536;
         double area = PI * Math.pow(radius, 2);
         return area;
