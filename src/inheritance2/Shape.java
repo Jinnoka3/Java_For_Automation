@@ -1,23 +1,31 @@
 package inheritance2;
 
-public class Shape {
-    protected String color;
-    protected boolean filled;
+import java.util.Scanner;
 
-    protected Shape(){
+public class Shape {
+
+    private String color;
+    private boolean filled;
+
+    public Shape(){
         this.color = "green";
         this.filled = true;
     }
-    protected Shape(String color, boolean filled){
-        this.color = color;
-        this.filled = filled;
+    public Shape(String color, boolean filled){
+        setColor(color);
+        setFilled(filled);
     }
     public String getColor() {
         return color;
     }
 
     public void setColor(String color) {
-        this.color = color;
+        if (!Color.checkColor(color)) {
+            System.out.println("Wrong color");
+        }
+        else {
+            this.color = color;
+        }
     }
     public boolean getFilled() {
         return filled;
@@ -27,9 +35,21 @@ public class Shape {
         this.filled = filled;
     }
 
-    protected String filled(){
+    public String filled(){
         String str = (filled == true) ? "filled" : "not filled";
         return str;
+    }
+
+    public void input() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter color:");
+        String color = in.nextLine();
+        setColor(color);
+
+        System.out.println("Enter filled (true/false):");
+        boolean filled = in.nextBoolean();
+        setFilled(filled);
+
     }
 
     @Override
