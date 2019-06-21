@@ -22,8 +22,6 @@ public class Rectangle extends Shape {
         return width;
     }
 
-
-
     public void setWidth(double width) {
         if (width <= 0) {
             System.out.println("Wrong width");
@@ -59,7 +57,7 @@ public class Rectangle extends Shape {
         setLength(length);
 
     }
-@Override
+    @Override
     public double getPerimeter(){
         return 2 * (this.width + this.length);
     }
@@ -68,6 +66,7 @@ public class Rectangle extends Shape {
     public double getArea(){
         return this.width * this.length;
     }
+
     @Override
     public boolean isInside(){
 

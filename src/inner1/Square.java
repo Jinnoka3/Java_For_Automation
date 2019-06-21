@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class Square extends Rectangle {
 
-    public Square()
-    {
+    public Square(){
         super();
     }
 
-    public Square(double side)
-    {
+    public Square(double side){
         super(side, side);
     }
 

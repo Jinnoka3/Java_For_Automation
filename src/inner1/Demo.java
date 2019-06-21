@@ -8,11 +8,13 @@ public class Demo {
             Circle circle = new Circle();
             circle.input();
         System.out.println(circle);
+
         if(circle.isInside()){
             System.out.println("Point is inside");
         }
         else
             System.out.println("Point isn't inside");
+
         System.out.println("Area: " + circle.getArea());
         System.out.println("Perimeter: " + circle.getPerimeter());
 
@@ -21,11 +23,13 @@ public class Demo {
             Rectangle rectangle = new Rectangle();
             rectangle.input();
         System.out.println(rectangle);
+
         if(rectangle.isInside()){
             System.out.println("Point is inside");
         }
         else
             System.out.println("Point isn't inside");
+
         System.out.println("Area: " + rectangle.getArea());
         System.out.println("Perimeter: " + rectangle.getPerimeter());
 
@@ -34,11 +38,13 @@ public class Demo {
             Square square = new Square();
             square.input();
         System.out.println(square);
+
         if(square.isInside()){
             System.out.println("Point is inside");
         }
         else
             System.out.println("Point isn't inside");
+
         System.out.println("Area: " +square.getArea());
         System.out.println("Perimeter: " + square.getPerimeter());
     }

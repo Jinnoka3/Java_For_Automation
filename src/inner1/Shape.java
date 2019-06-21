@@ -8,7 +8,6 @@ public abstract class Shape {
     private double y;
 
     public Shape(){
-
         this.x = 0;
         this.y = 0;
     }
@@ -38,10 +37,11 @@ public abstract class Shape {
         System.out.println("Enter y:");
         double y = in.nextDouble();
         setY(y);
-
     }
 
     public abstract double getArea();
+
     public abstract double getPerimeter();
+
     public abstract boolean isInside();
 }

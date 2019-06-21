@@ -38,6 +38,7 @@ public class Circle extends Shape {
             double radius = in.nextDouble();
             setRadius(radius);
     }
+
     @Override
     public double getArea() {
         double area = Math.PI * Math.pow(radius, 2);
@@ -62,5 +63,4 @@ public class Circle extends Shape {
     public String toString() {
         return "A Circle with radius = " + radius;
     }
-
 }
