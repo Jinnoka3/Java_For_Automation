@@ -3,23 +3,23 @@ package inheritance3;
 import java.util.Arrays;
 
 public class Math {
+    public static final double PI = 3.1415926536;
+    private int[] arrayInt;
+    private double[] arrayDouble;
+    private int numInt;
+    private double numDouble;
 
-    protected int[] arrayInt;
-    protected double[] arrayDouble;
-    protected int numInt;
-    protected double numDouble;
 
-
-    protected Math(){
+    public Math(){
     }
 
-    protected Math(int[] arrayInt){
+    public Math(int[] arrayInt){
 
         this.arrayInt = arrayInt;
     }
 
 
-    protected Math(int[] arrayInt, int num){
+    public Math(int[] arrayInt, int num){
         this.arrayInt = arrayInt;
         this.numInt = num;
     }
@@ -59,7 +59,7 @@ public class Math {
     }
 
     //INT
-    public int min(int array[]){
+    public static int min(int array[]){
         int min = array[0];
         for(int i = 0; i < array.length; i++) {
             if(array[i] < min)
@@ -68,7 +68,7 @@ public class Math {
         return min;
     }
 
-    public int max(int array[]){
+    public static int max(int array[]){
         int max = array[0];
         for(int i = 0; i < array.length; i++) {
             if(array[i] > max)
@@ -77,7 +77,7 @@ public class Math {
         return max;
     }
 
-    public int nextAfter(int array[], int num){
+    public static int nextAfter(int array[], int num){
         int next = 0;
 
         for(int i = 0; i < array.length; i++) {
@@ -98,7 +98,7 @@ public class Math {
         return result;
     }
     //DOUBLE
-    public double min(double array[]){
+    public static double min(double array[]){
         double min = array[0];
         for(int i = 0; i < array.length; i++) {
             if(array[i] < min)
@@ -107,7 +107,7 @@ public class Math {
         return min;
     }
 
-    public double max(double array[]){
+    public static double max(double array[]){
         double max = array[0];
         for(int i = 0; i < array.length; i++) {
             if(array[i] > max)
@@ -116,7 +116,7 @@ public class Math {
         return max;
     }
 
-    public double nextAfter(double array[], double num){
+    public static double nextAfter(double array[], double num){
         double next = 0;
         for(int i = 0; i < array.length; i++) {
             if (array[i] > num ) {
