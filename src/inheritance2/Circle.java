@@ -43,7 +43,6 @@ public class Circle extends Shape{
     }
     public double getArea() {
         double area = Math.PI * Math.pow(radius, 2);
-        double area = PI * Math.pow(radius, 2);
         return area;
     }
 
