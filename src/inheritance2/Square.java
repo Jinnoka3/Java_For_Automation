@@ -1,59 +1,55 @@
 package inheritance2;
 
+import java.util.Scanner;
+
 public class Square extends Rectangle {
 
-    protected Square() {
+    public Square() {
+        super();
     }
 
-    protected Square(double side) {
+    public Square(double side) {
         super(side, side);
     }
 
-    protected Square(double side, String color, boolean filled) {
-        super(side, side);
-        this.color = color;
-        this.filled = filled;
+    public Square(double side, String color, boolean filled) {
+        super(side, side, color, filled);
     }
 
-    public double getWidth() {
-        return width;
-    }
     @Override
     public void setWidth(double side) {
-        super.width = side;
-    }
-
-    public double getLength() {
-        return length;
-    }
-    @Override
-    public void setLength(double side) {
-        super.length = side;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public boolean getFilled() {
-        return filled;
-    }
-
-    public void setFilled(boolean filled) {
-        this.filled = filled;
+        if (side <= 0) {
+            System.out.println("Wrong side");
+        }
+        else {
+            super.setWidth(side);
+            super.setLength(side);
+        }
     }
 
     @Override
-    protected double getPerimeter(){
-        return super.getPerimeter();
+    public void setLength(double width) {
+        this.setWidth(width);
+    }
+
+    @Override
+    public void input() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter color:");
+        String color = in.nextLine();
+        setColor(color);
+
+        System.out.println("Enter filled (true/false):");
+        boolean filled = in.nextBoolean();
+        setFilled(filled);
+
+        System.out.println("Enter side:");
+        double side = in.nextDouble();
+        setWidth(side);
     }
 
     @Override
     public String toString() {
-        return "A Square with side = " + width + ", which is a subclass of " + super.toString();
+        return "A Square with side = " + this.getWidth() + ", which is a subclass of " + super.toString();
     }
 }
