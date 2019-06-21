@@ -20,18 +20,13 @@ public class Demo {
             arrayInt[i] = in.nextInt();
         }
         Arrays.sort(arrayInt);
-        for(int i = 0; i < arrayInt.length; i++){
-            System.out.println(arrayInt[i]);
-        }
-        Math math1 = new Math(arrayInt);
-        System.out.println("Lowest number: " + math1.min(arrayInt));
-        System.out.println("Biggest number: " + math1.max(arrayInt));
+        System.out.println("Lowest number: " + Math.min(arrayInt));
+        System.out.println("Biggest number: " + Math.max(arrayInt));
 
         System.out.println("Enter int number: ");
         int num = in.nextInt();
-        Math math3 = new Math(arrayInt, num);
 
-        System.out.println("First int number is greater than parameter: " + math3.nextAfter(arrayInt, num));
+        System.out.println("First int number is greater than parameter: " + Math.nextAfter(arrayInt, num));
 
         //DOUBLE
         System.out.println("Enter double array size: ");
@@ -46,17 +41,13 @@ public class Demo {
             arrayDouble[i] = in.nextDouble();
         }
         Arrays.sort(arrayDouble);
-        Math math2 = new Math(arrayInt);
-        System.out.println("Lowest number: " + math2.min(arrayDouble));
-        System.out.println("Biggest number: " + math2.max(arrayDouble));
+       // Math math2 = new Math(arrayInt);
+        System.out.println("Lowest number: " + Math.min(arrayDouble));
+        System.out.println("Biggest number: " + Math.max(arrayDouble));
 
         System.out.println("Enter double number: ");
         double num2 = in.nextDouble();
-        Math math4 = new Math(arrayDouble, num2);
-        for(int i = 0; i < arrayDouble.length; i++){
-            System.out.println(arrayDouble[i]);
-        }
-        System.out.println("First int number is greater than parameter: " + math4.nextAfter(arrayDouble, num2));
+        System.out.println("First int number is greater than parameter: " + Math.nextAfter(arrayDouble, num2));
 
         //3
         System.out.println("Pow: ");
@@ -71,8 +62,6 @@ public class Demo {
         System.out.println("Enter a power: ");
         int d = in.nextInt();
         System.out.println(Math.pow(c, d));
-
-
     }
 
 }
