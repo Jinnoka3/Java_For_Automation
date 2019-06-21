@@ -25,15 +25,12 @@ public class Demo {
         for (Shape shape : array){
             if (shape instanceof Circle){
                 System.out.println("Circle's area: " + ((Circle)shape).getArea());
-                continue;
             }
-            if (shape instanceof Square){
+            else if (shape instanceof Square){
                 System.out.println("Square's perimeter: " + ((Square)shape).getPerimeter());
-                continue;
             }
-            if (shape instanceof Rectangle){
+            else if (shape instanceof Rectangle){
                 System.out.println("Rectangle's perimeter: " + ((Rectangle)shape).getPerimeter());
-                continue;
             }
         }
     }
