@@ -1,24 +1,27 @@
 package inheritance2;
 
-public class Rectangle extends Shape {
-    protected double width;
-    protected double length;
+import java.util.Scanner;
 
-    protected Rectangle() {
+public class Rectangle extends Shape {
+    private double width;
+    private double length;
+
+    public Rectangle() {
+        super();
         this.width = 1.0;
         this.length = 1.0;
     }
 
-    protected Rectangle(double width, double length) {
-        this.width = width;
-        this.length = length;
+    public Rectangle(double width, double length) {
+        super();
+        setWidth(width);
+        setLength(length);
     }
 
-    protected Rectangle(double width, double length, String color, boolean filled) {
-        this.width = width;
-        this.length = length;
-        this.color = color;
-        this.filled = filled;
+    public Rectangle(double width, double length, String color, boolean filled) {
+        super(color, filled);
+        setWidth(width);
+        setLength(length);
     }
 
     public double getWidth() {
@@ -26,7 +29,12 @@ public class Rectangle extends Shape {
     }
 
     public void setWidth(double width) {
-        this.width = width;
+        if (width <= 0) {
+            System.out.println("Wrong width");
+        }
+        else {
+            this.width = width;
+        }
     }
 
     public double getLength() {
@@ -34,27 +42,30 @@ public class Rectangle extends Shape {
     }
 
     public void setLength(double length) {
-        this.length = length;
+        if (length <= 0) {
+            System.out.println("Wrong length");
+        }
+        else {
+            this.length = length;
+        }
     }
 
-    public String getColor() {
-        return color;
+    @Override
+    public void input() {
+        super.input();
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter width:");
+        double width = in.nextDouble();
+        setWidth(width);
+
+        System.out.println("Enter length:");
+        double length = in.nextDouble();
+        setLength(length);
+
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public boolean getFilled() {
-        return filled;
-    }
-
-    public void setFilled(boolean filled) {
-        this.filled = filled;
-    }
-
-    protected double getPerimeter(){
-        return (2 * (width + length));
+    public double getPerimeter(){
+        return 2 * (this.width + this.length);
     }
 
     @Override
