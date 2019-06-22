@@ -1,3 +1,4 @@
+package objects3;
 import java.util.*;
 
 public class DogsDemo {

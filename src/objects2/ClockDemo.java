@@ -1,3 +1,6 @@
+package objects2;
+import java.util.Scanner;
+
 public class ClockDemo {
     public static void main(String[] args) {
         //time in seconds
