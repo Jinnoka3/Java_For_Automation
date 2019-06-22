@@ -30,9 +30,8 @@ public class Circle extends Shape {
         }
     }
 
-    @Override
     public void input() {
-            super.input();
+            Point.input();
             Scanner in = new Scanner(System.in);
             System.out.println("Enter radius:");
             double radius = in.nextDouble();
@@ -48,12 +47,12 @@ public class Circle extends Shape {
     @Override
     public double getPerimeter(){
         return 2 * Math.PI * radius;
-    }
+    }//////////////////////////////////////////
 
     @Override
     public boolean isInside(){
 
-        if(Math.abs(super.getX())> radius || Math.abs(super.getY()) > radius){
+        if(Math.abs(Point.getX())> radius || Math.abs(Point.getY()) > radius){
             return false;
         }
         return true;

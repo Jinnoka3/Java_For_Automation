@@ -19,6 +19,7 @@ public class Demo {
         System.out.println("Perimeter: " + circle.getPerimeter());
 
         //Rectangle
+        System.out.println();
         System.out.println("Rectangle");
             Rectangle rectangle = new Rectangle();
             rectangle.input();
@@ -34,6 +35,7 @@ public class Demo {
         System.out.println("Perimeter: " + rectangle.getPerimeter());
 
         //Square
+        System.out.println();
         System.out.println("Square");
             Square square = new Square();
             square.input();

@@ -30,15 +30,8 @@ public class Square extends Rectangle {
 
     @Override
     public void input() {
+        Point.input();
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter x:");
-        double x = in.nextDouble();
-        setX(x);
-
-        System.out.println("Enter y:");
-        double y = in.nextDouble();
-        setY(y);
-
         System.out.println("Enter side:");
         double side = in.nextDouble();
         setWidth(side);

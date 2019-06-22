@@ -44,9 +44,8 @@ public class Rectangle extends Shape {
         }
     }
 
-    @Override
     public void input() {
-        super.input();
+        Point.input();
         Scanner in = new Scanner(System.in);
         System.out.println("Enter width:");
         double width = in.nextDouble();
@@ -70,7 +69,7 @@ public class Rectangle extends Shape {
     @Override
     public boolean isInside(){
 
-        if(Math.abs(super.getX())> width/2 || Math.abs(super.getY()) > length/2){
+        if(Math.abs(Point.getX())> width/2 || Math.abs(Point.getY()) > length/2){
             return false;
         }
         return true;
