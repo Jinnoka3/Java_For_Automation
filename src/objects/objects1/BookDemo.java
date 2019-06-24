@@ -1,4 +1,4 @@
-package objects;
+package objects.objects1;
 import java.util.Scanner;
 
 public class BookDemo {

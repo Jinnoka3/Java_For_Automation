@@ -1,4 +1,4 @@
-package objects;
+package objects.objects1;
 public class Book {
     String title;
     Author author;

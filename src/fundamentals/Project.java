@@ -1,3 +1,5 @@
+package fundamentals;
+
 public class Project {
     static int x = 10;
     static int y = 5;

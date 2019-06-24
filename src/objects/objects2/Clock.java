@@ -1,3 +1,4 @@
+package objects.objects2;
 public class Clock {
 
     public int hours;

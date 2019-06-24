@@ -1,4 +1,4 @@
-package objects;
+package objects.objects1;
 public class Author{
     String firstName;
     String lastName;

@@ -1,4 +1,4 @@
-package pack;
+package fundamentals;
 
 import java.util.Arrays;
 import java.util.Scanner;

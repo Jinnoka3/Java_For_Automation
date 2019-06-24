@@ -1,3 +1,4 @@
+package objects.objects3;
 import java.util.Random;
 
 public class Dog {
