@@ -2,7 +2,7 @@ package inner.inner1;
 
 import java.util.Scanner;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Shape implements Comparable<Rectangle>{
     private double width;
     private double length;
 
@@ -79,4 +79,10 @@ public class Rectangle extends Shape {
     public String toString() {
         return "A Rectangle with width = " + width + " and length = " + length;
     }
+
+    @Override
+    public int compareTo(Rectangle x){
+        return this.getArea() != x.getArea()? 1 : 0;
+    }
+
 }

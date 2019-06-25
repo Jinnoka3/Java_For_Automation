@@ -1,18 +1,19 @@
 package inheritance.inheritance1;
 
-public class Circle {
+public class Circle
+{
 
     protected double radius;
     protected Color color;
 
-    protected Circle(){
+    public Circle() {
     }
 
-    protected Circle(double radius){
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    protected Circle(double radius, Color color){
+    public Circle(double radius, Color color) {
         this.radius = radius;
         this.color = color;
     }
@@ -43,5 +44,6 @@ public class Circle {
     public String toString() {
         return "Radius: " + radius + "\nColor: " + color.name().toLowerCase() + "\nArea: " + getArea();
     }
+
 
 }
