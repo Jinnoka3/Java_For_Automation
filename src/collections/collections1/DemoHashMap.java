@@ -25,7 +25,7 @@ public class DemoHashMap {
 
         System.out.println();
         System.out.println("Remove");
-        students.remove("VolGTU", "someone");
+        students.remove("VolGMU");
 
         for (Map.Entry<String, String> item : students.entrySet()){
             System.out.println("Key: " + item.getKey() + " Name: " + item.getValue());

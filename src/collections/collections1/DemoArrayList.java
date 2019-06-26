@@ -7,7 +7,8 @@ public class DemoArrayList {
 
     public static void main(String[] args) {
         ArrayList<String> names = new ArrayList<>();
-        //add
+
+        System.out.println("Add:");
         names.add("Anon");
         names.add("Misha");
         names.add("Dasha");
@@ -17,13 +18,16 @@ public class DemoArrayList {
         names.add("Dima");
         names.add("Someone");
         displayInfo(names);
-        //edit
+
+        System.out.println("Edit Anon:");
         names.set(0, "Artem");
         displayInfo(names);
-        //remove
+
+        System.out.println("Remove Someone:");
         names.remove(7);
         displayInfo(names);
-        //sort
+
+        System.out.println("Sort:");
         sort(names);
         displayInfo(names);
     }
