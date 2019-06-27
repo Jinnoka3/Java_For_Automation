@@ -26,12 +26,13 @@ public class Demo {
         persons1.add(new Person("Misha", 17));
         persons1.add(new Person("Misha", 15));
         ArrayList<Person> persons2 = new ArrayList<>();
-        persons2.add(new Person("Misha", 17));
         persons2.add(new Person("Misha", 15));
+        persons2.add(new Person("Misha", 17));
+
         //persons2.add(new Person("Misha", 0));
 
-        Collections.sort(persons);
         System.out.println("Comparable:");
+        Collections.sort(persons);
         displayInfo(persons);
 
         System.out.println("Comparator:");
@@ -43,6 +44,10 @@ public class Demo {
         displayInfo1(uniq(persons));
 
         System.out.println("Equals:");
+        Collections.sort(persons1, new Person.NameSorter()
+                .thenComparing(new Person.AgeSorter()));
+        Collections.sort(persons2, new Person.NameSorter()
+                .thenComparing(new Person.AgeSorter()));
         System.out.println(compareTo(persons1, persons2));
     }
 
