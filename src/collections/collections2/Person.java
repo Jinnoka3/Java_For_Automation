@@ -66,4 +66,17 @@ public class Person implements Comparable<Person>{
             return d1.age - d2.age;
         }
     }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (o == this)
+            return true;
+        if (!(o instanceof Person)) {
+            return false;
+        }
+        Person user = (Person) o;
+        return age == user.age &&
+                Objects.equals(name, user.name);
+    }
 }
