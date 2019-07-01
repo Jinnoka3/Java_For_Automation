@@ -7,9 +7,8 @@ public class MultipleExceptions {
         Multiple exception = new Multiple();
         try {
             exception.allExceptions();
-
         }
-        catch(Exception e) {
+        catch(Exception1 | Exception2 | Exception3 e) {
             System.out.println(e);
         }
     }
@@ -26,9 +25,9 @@ public class MultipleExceptions {
     public static class Multiple {
 
         public void allExceptions() throws Exception1, Exception2, Exception3 {
-            //throw new Exception1();
+            throw new Exception1();
             //throw new Exception2();
-            throw new Exception3();
+            //throw new Exception3();
         }
     }
 }
