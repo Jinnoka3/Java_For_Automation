@@ -2,7 +2,7 @@ package inner.inner1;
 
 import java.util.Scanner;
 
-public class Circle extends Shape {
+public class Circle extends Shape implements Comparable<Circle>{
 
     private double radius;
 
@@ -61,5 +61,10 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return "A Circle with radius = " + radius;
+    }
+
+    @Override
+    public int compareTo(Circle x) {
+        return this.getArea() != x.getArea() ? 1 : 0;
     }
 }
